@@ -1,0 +1,89 @@
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Input fields for name and phone number */
+.formName,
+.formNumber {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 400px;
+  height: 20px;
+}
+
+/* Styles for input fields */
+.formName input,
+.formNumber input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  margin-top: 1rem;
+  color: #333;
+  background-color: transparent;
+  transition: border-bottom-color 0.3s ease-in-out;
+}
+
+/* Styles for label of input fields */
+.formName label,
+.formNumber label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Styles for label of input fields when it's active */
+.formName input:focus + label,
+.formNumber input:focus + label {
+  transform: translateY(-1.5rem);
+  font-size: 1rem;
+  color: #2f80ed;
+}
+
+/* Styles for input fields when they're active */
+.formName input:focus,
+.formNumber input:focus {
+  border-bottom-color: #2f80ed;
+  outline: none;
+}
+
+/* Submit button */
+.formBtn {
+  margin-top: 2rem;
+  background-color: #2f80ed;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Styles for submit button on hover */
+.formBtn:hover {
+  background-color: #1d5bbf;
+}

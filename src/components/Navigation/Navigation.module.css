@@ -1,0 +1,33 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 700;
+  color: #2a363b;
+  position: relative;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.link:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #e84a5f;
+  transition: all 0.2s ease;
+}
+
+.link:hover:before {
+  width: 100%;
+}
+
+.link.active {
+  color: #e84a5f;
+}
+
+.link.active:before {
+  width: 100%;
+}

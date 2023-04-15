@@ -1,89 +1,86 @@
-/* Form */
 .form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
   padding: 2rem;
-  border: 2px solid #ccc;
-  border-radius: 6px;
-}
-
-/* Input fields for name and phone number */
-.formName,
-.formNumber {
+  border: 2px solid #2a363b;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+  font-family: "Montserrat", sans-serif;
+  }
+  
+  .formLabel,
+  .formName,
+  .formNumber {
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 400px;
-  height: 20px;
-}
-
-/* Styles for input fields */
-.formName input,
-.formNumber input {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1.4rem;
-  font-weight: 500;
-  border: none;
-  border-bottom: 2px solid #ccc;
-  margin-top: 1rem;
-  color: #333;
-  background-color: transparent;
-  transition: border-bottom-color 0.3s ease-in-out;
-}
-
-/* Styles for label of input fields */
-.formName label,
-.formNumber label {
+  align-items: left;
   font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: #333;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Styles for label of input fields when it's active */
-.formName input:focus + label,
-.formNumber input:focus + label {
-  transform: translateY(-1.5rem);
-  font-size: 1rem;
-  color: #2f80ed;
-}
-
-/* Styles for input fields when they're active */
-.formName input:focus,
-.formNumber input:focus {
-  border-bottom-color: #2f80ed;
+  text-align: left;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  }
+  
+  .formLabel {
+  font-weight: bold;
+  color: #2a363b;
+  }
+  
+  .formInput {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  color: #2a363b;
+  font-size: 1.1rem;
+  }
+  
+  .formInput:focus {
   outline: none;
-}
-
-/* Submit button */
-.formBtn {
+  border: 2px solid #007ACC;
+  background-color: #ffffff;
+  }
+  
+  .formBtn {
   margin-top: 2rem;
-  background-color: #2f80ed;
+  background-color: #007ACC;
   border: none;
   border-radius: 6px;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
-  font-weight: 600;
-  height: 3.5rem;
-  line-height: 3.5rem;
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-  transition: background-color 0.3s ease-in-out;
+  height: 50px;
+  min-width: 185px;
+  padding: 0 2rem;
   cursor: pointer;
-  text-transform: uppercase;
-}
-
-/* Styles for submit button on hover */
-.formBtn:hover {
-  background-color: #1d5bbf;
-}
+  transition: all 0.3s ease;
+  }
+  
+  .formBtn:hover {
+  background-color: #005A9C;
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Анимация */
+  @keyframes fadeIn {
+  0% {
+  opacity: 0;
+  transform: translateY(20px);
+  }
+  100% {
+  opacity: 1;
+  transform: translateY(0);
+  }
+  }
+  
+  .formLabel,
+  .formInput,
+  .formBtn {
+  animation-name: fadeIn;
+  animation-duration: 0.8s;
+  }
